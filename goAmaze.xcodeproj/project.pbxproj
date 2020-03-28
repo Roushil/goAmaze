@@ -28,6 +28,7 @@
 		2BF6FE91242CB37500EA7C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeautifulPeoplePersonalUse-PYP2.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		2BF6FE82242CB36F00EA7C4A /* goAmaze */ = {
 			isa = PBXGroup;
 			children = (
+				473BC3AC242DB1F8001667C8 /* Fonts */,
 				2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */,
 				2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */,
 				2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */,
@@ -71,6 +73,14 @@
 				2BF6FE91242CB37500EA7C4A /* Info.plist */,
 			);
 			path = goAmaze;
+			sourceTree = "<group>";
+		};
+		473BC3AC242DB1F8001667C8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
