@@ -11,21 +11,19 @@ import UIKit
 class LogInViewController: UIViewController {
     
     @IBOutlet weak var logInLabel: UILabel!
-    @IBOutlet weak var mobileOrEmail: UITextField!
     @IBOutlet weak var registerUserButton: UIButton!
+    @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var userPassword: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        iconImage.image = UIImage(named: "Icon_Chick")?.withRenderingMode(.alwaysTemplate)
-//        iconImage.tintColor = UIColor(red: 101/255, green: 195/255, blue: 102/255, alpha: 1.0)
+//        chickIcon.image = UIImage(named: "Icon_Chick")?.withRenderingMode(.alwaysTemplate)
+//        chickIcon.tintColor = UIColor(red: 101/255, green: 195/255, blue: 102/255, alpha: 1.0)
         setBordersAndDelegates()
     }
-
-    @IBAction func logInUser(_ sender: Any) {
-        
-    }
+    
     
     @IBAction func registerUser(_ sender: Any) {
         
@@ -36,9 +34,11 @@ class LogInViewController: UIViewController {
     
     fileprivate func setBordersAndDelegates(){
         
-        //mobileOrEmail.delegate = self
+        userEmail.delegate = self
+        userPassword.delegate = self
         logInLabel.underline()
-        //mobileOrEmail.underline(changeColor: false)
+        userEmail.underline(changeColor: false)
+        userPassword.underline(changeColor: false)
         registerUserButton.drawBorder()
     }
 }
