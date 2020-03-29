@@ -14,13 +14,15 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var registerUserButton: UIButton!
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet weak var chickImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        chickIcon.image = UIImage(named: "Icon_Chick")?.withRenderingMode(.alwaysTemplate)
-//        chickIcon.tintColor = UIColor(red: 101/255, green: 195/255, blue: 102/255, alpha: 1.0)
+        //chickImage.image = UIImage(named: "Icon_Chick")?.withRenderingMode(.alwaysTemplate)
+        //chickImage.tintColor = UIColor(red: 101/255, green: 195/255, blue: 102/255, alpha: 1.0)
+        //chickImage.tintColor = .white
         setBordersAndDelegates()
     }
     

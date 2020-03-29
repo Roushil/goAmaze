@@ -12,10 +12,14 @@ class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var newAccountLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var userMobileNumber: UITextField!
-    @IBOutlet weak var userEmail: UITextField!
-    @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var userEmailField: UITextField!
+    @IBOutlet weak var setPasswordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var crossImage: UIImageView!
+    @IBOutlet weak var crossAlertText: UILabel!
+    @IBOutlet weak var chickImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +34,17 @@ class RegistrationViewController: UIViewController {
     fileprivate func setBordersAndDelegates(){
         
         loginButton.drawBorder()
-        newAccountLabel.underline()
-        userName.underline(changeColor: false)
-        userMobileNumber.underline(changeColor: false)
-        userEmail.underline(changeColor: false)
-        userPassword.underline(changeColor: false)
-        userName.delegate = self
-        userMobileNumber.delegate = self
-        userEmail.delegate = self
-        userPassword.delegate = self
+        userNameField.delegate = self
+        userEmailField.delegate = self
+        setPasswordField.delegate = self
+        confirmPasswordField.delegate = self
+        userNameField.underline(changeColor: false)
+        userEmailField.underline(changeColor: false)
+        setPasswordField.underline(changeColor: false)
+        confirmPasswordField.underline(changeColor: false)
+        
+        crossImage.isHidden = true
+        crossAlertText.isHidden = true
     }
 }
 
@@ -56,5 +62,13 @@ extension RegistrationViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
             
         textField.underline(changeColor: true)
+        
+        if confirmPasswordField.text != setPasswordField.text {
+            crossImage.isHidden = false
+            crossAlertText.isHidden = false
+        }else{
+            crossImage.isHidden = true
+            crossAlertText.isHidden = true
+        }
     }
 }
