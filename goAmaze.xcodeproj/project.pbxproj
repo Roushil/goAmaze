@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,11 @@
 		2BF6FE90242CB37500EA7C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6FE8E242CB37500EA7C4A /* LaunchScreen.storyboard */; };
 		2BF6FE98242CB6BE00EA7C4A /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */; };
 		2BF6FE9A242CC8B800EA7C4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */; };
+		DE91F7E93BC905AEF22A8227 /* libPods-goAmaze.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D821E40CF841E0A5D10FD6 /* libPods-goAmaze.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.release.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.release.xcconfig"; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +30,9 @@
 		2BF6FE91242CB37500EA7C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		40D821E40CF841E0A5D10FD6 /* libPods-goAmaze.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-goAmaze.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeautifulPeoplePersonalUse-PYP2.ttf"; sourceTree = "<group>"; };
+		EDA1DD3BC181C89BFEDFEF83 /* Pods-goAmaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.debug.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE91F7E93BC905AEF22A8227 /* libPods-goAmaze.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				2BF6FE82242CB36F00EA7C4A /* goAmaze */,
 				2BF6FE81242CB36F00EA7C4A /* Products */,
+				31A08127AF3960FC1B87135C /* Pods */,
+				AA1E63BB094F09788B4FAA38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,12 +82,29 @@
 			path = goAmaze;
 			sourceTree = "<group>";
 		};
+		31A08127AF3960FC1B87135C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1DD3BC181C89BFEDFEF83 /* Pods-goAmaze.debug.xcconfig */,
+				0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		473BC3AC242DB1F8001667C8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AA1E63BB094F09788B4FAA38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40D821E40CF841E0A5D10FD6 /* libPods-goAmaze.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BF6FE94242CB37500EA7C4A /* Build configuration list for PBXNativeTarget "goAmaze" */;
 			buildPhases = (
+				A26199B6D0F1E27FE8F9FDE7 /* [CP] Check Pods Manifest.lock */,
 				2BF6FE7C242CB36F00EA7C4A /* Sources */,
 				2BF6FE7D242CB36F00EA7C4A /* Frameworks */,
 				2BF6FE7E242CB36F00EA7C4A /* Resources */,
+				38C9982B25FC5757AEE3E801 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38C9982B25FC5757AEE3E801 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goAmaze/Pods-goAmaze-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goAmaze/Pods-goAmaze-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-goAmaze/Pods-goAmaze-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A26199B6D0F1E27FE8F9FDE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-goAmaze-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BF6FE7C242CB36F00EA7C4A /* Sources */ = {
@@ -300,6 +368,7 @@
 		};
 		2BF6FE95242CB37500EA7C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA1DD3BC181C89BFEDFEF83 /* Pods-goAmaze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +387,7 @@
 		};
 		2BF6FE96242CB37500EA7C4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -16,9 +16,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var userEmailField: UITextField!
     @IBOutlet weak var setPasswordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
-    @IBOutlet weak var crossImage: UIImageView!
-    @IBOutlet weak var crossAlertText: UILabel!
-    @IBOutlet weak var chickImage: UIImageView!
+    @IBOutlet weak var alertView: UIView!
     
     
     override func viewDidLoad() {
@@ -42,9 +40,7 @@ class RegistrationViewController: UIViewController {
         userEmailField.underline(changeColor: false)
         setPasswordField.underline(changeColor: false)
         confirmPasswordField.underline(changeColor: false)
-        
-        crossImage.isHidden = true
-        crossAlertText.isHidden = true
+        alertView.isHidden = true
     }
 }
 
@@ -62,13 +58,6 @@ extension RegistrationViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
             
         textField.underline(changeColor: true)
-        
-        if confirmPasswordField.text != setPasswordField.text {
-            crossImage.isHidden = false
-            crossAlertText.isHidden = false
-        }else{
-            crossImage.isHidden = true
-            crossAlertText.isHidden = true
-        }
+        confirmPasswordField.text != setPasswordField.text ? (alertView.isHidden = false) : (alertView.isHidden = true)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LogInViewController: UIViewController {
     
@@ -14,15 +15,13 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var registerUserButton: UIButton!
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
-    @IBOutlet weak var chickImage: UIImageView!
-    
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //chickImage.image = UIImage(named: "Icon_Chick")?.withRenderingMode(.alwaysTemplate)
-        //chickImage.tintColor = UIColor(red: 101/255, green: 195/255, blue: 102/255, alpha: 1.0)
-        //chickImage.tintColor = .white
+
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         setBordersAndDelegates()
     }
     
@@ -32,6 +31,11 @@ class LogInViewController: UIViewController {
         let registerUserVC = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
         registerUserVC.modalPresentationStyle = .fullScreen
         present(registerUserVC,animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
+      GIDSignIn.sharedInstance().signOut()
+        print("Successfully Signed Out")
     }
     
     fileprivate func setBordersAndDelegates(){
