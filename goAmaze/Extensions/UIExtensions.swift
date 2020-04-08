@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
-
 extension UIImageView{
 
     func loadImageUsingCache(image: String){
@@ -37,7 +36,19 @@ extension UIImageView{
     }
 }
 
-
+extension UIViewController{
+    
+    class func instantiateFromStoryboard(_ name: String = "Main") -> Self {
+        
+        return instantiateFromStoryboardHelper(name)
+    }
+    
+    fileprivate class func instantiateFromStoryboardHelper<T>(_ name: String) -> T {
+        
+        let controller = UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: "\(Self.self)") as! T
+        return controller
+    }
+}
 
 extension UILabel{
     

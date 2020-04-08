@@ -30,8 +30,7 @@ class LogInViewController: UIViewController {
         
     }
     @IBAction func registerUser(_ sender: Any) {
-        
-        let registerUserVC = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
+        let registerUserVC = RegistrationViewController.shareInstance()
         registerUserVC.modalPresentationStyle = .fullScreen
         present(registerUserVC,animated: true, completion: nil)
     }
