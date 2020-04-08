@@ -26,9 +26,11 @@ class LogInViewController: UIViewController {
     }
     
     
-    @IBAction func registerUser(_ sender: Any) {
+    @IBAction func signInUser(_ sender: UIButton) {
         
-        let registerUserVC = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
+    }
+    @IBAction func registerUser(_ sender: Any) {
+        let registerUserVC = RegistrationViewController.shareInstance()
         registerUserVC.modalPresentationStyle = .fullScreen
         present(registerUserVC,animated: true, completion: nil)
     }

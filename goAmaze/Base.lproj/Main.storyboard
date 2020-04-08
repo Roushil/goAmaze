@@ -127,6 +127,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signInUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKm-4V-s7w"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-yZ-cWZ" customClass="GIDSignInButton">
                                                 <rect key="frame" x="20" y="92.666666666666629" width="374" height="43"/>
@@ -348,6 +351,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signUpUser:" destination="bwq-8q-syX" eventType="touchUpInside" id="yz2-GU-Rlk"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Chick" id="Ot0-FS-LgP">
                                                 <rect key="frame" x="175" y="108" width="84" height="80"/>
