@@ -29,6 +29,9 @@ class RegistrationViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func signUpUser(_ sender: Any) {
+        
+    }
     fileprivate func setBordersAndDelegates(){
         
         loginButton.drawBorder()
