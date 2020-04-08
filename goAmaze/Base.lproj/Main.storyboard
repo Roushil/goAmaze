@@ -7,10 +7,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="TQD-iF-wYC">
+            <objects>
+                <viewController id="3DD-9P-9t8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9q4-56-Grs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="E0k-m5-zD9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfy-kr-EO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706" y="120"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="goAmaze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="goAmaze" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,6 +408,7 @@
                         <outlet property="loginButton" destination="Ye6-f2-a6H" id="yeM-tQ-MIu"/>
                         <outlet property="newAccountLabel" destination="mWl-cx-wTA" id="RBh-Tv-BV1"/>
                         <outlet property="setPasswordField" destination="48n-0Q-6Xq" id="0rz-Zz-Fnd"/>
+                        <outlet property="signUpButton" destination="aEg-87-pKx" id="IZL-05-5ph"/>
                         <outlet property="userEmailField" destination="rD5-MJ-qsw" id="tlz-CG-BCG"/>
                         <outlet property="userNameField" destination="QfU-EJ-kDo" id="60q-pD-YzZ"/>
                     </connections>

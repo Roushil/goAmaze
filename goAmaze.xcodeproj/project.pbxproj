@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B16571E243E5D7E00FF7522 /* Authentication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */; };
+		2B16571F243E5D7E00FF7522 /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */; };
+		2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B165723243E5E1300FF7522 /* CoreDataService.swift */; };
+		2B165725243E64E700FF7522 /* goAmaze.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 2B16571A243E3F6500FF7522 /* goAmaze.xcdatamodeld */; };
 		2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */; };
 		2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */; };
 		2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.release.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.release.xcconfig"; sourceTree = "<group>"; };
+		2B165719243E3F6500FF7522 /* goAmaze.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goAmaze.xcdatamodel; sourceTree = "<group>"; };
+		2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		2B165723243E5E1300FF7522 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +39,6 @@
 		2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		40D821E40CF841E0A5D10FD6 /* libPods-goAmaze.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-goAmaze.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeautifulPeoplePersonalUse-PYP2.ttf"; sourceTree = "<group>"; };
 		EDA1DD3BC181C89BFEDFEF83 /* Pods-goAmaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.debug.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +54,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B16571B243E5D5B00FF7522 /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */,
+				2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */,
+			);
+			path = "Core Data Models";
+			sourceTree = "<group>";
+		};
+		2B165720243E5D9400FF7522 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B165721243E5DCE00FF7522 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */,
+				2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B165722243E5DEB00FF7522 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2B165723243E5E1300FF7522 /* CoreDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2BF6FE77242CB36E00EA7C4A = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +109,16 @@
 		2BF6FE82242CB36F00EA7C4A /* goAmaze */ = {
 			isa = PBXGroup;
 			children = (
-				473BC3AC242DB1F8001667C8 /* Fonts */,
+				2B165720243E5D9400FF7522 /* Extensions */,
+				2B16571B243E5D5B00FF7522 /* Core Data Models */,
+				2B165722243E5DEB00FF7522 /* Services */,
 				2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */,
 				2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */,
-				2BF6FE97242CB6BE00EA7C4A /* UIExtensions.swift */,
-				2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */,
-				2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */,
+				2B165721243E5DCE00FF7522 /* ViewControllers */,
 				2BF6FE89242CB36F00EA7C4A /* Main.storyboard */,
 				2BF6FE8C242CB37500EA7C4A /* Assets.xcassets */,
 				2BF6FE8E242CB37500EA7C4A /* LaunchScreen.storyboard */,
+				2B16571A243E3F6500FF7522 /* goAmaze.xcdatamodeld */,
 				2BF6FE91242CB37500EA7C4A /* Info.plist */,
 			);
 			path = goAmaze;
@@ -89,14 +131,6 @@
 				0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		473BC3AC242DB1F8001667C8 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				473BC3AD242DB206001667C8 /* BeautifulPeoplePersonalUse-PYP2.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AA1E63BB094F09788B4FAA38 /* Frameworks */ = {
@@ -167,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B165725243E64E700FF7522 /* goAmaze.xcdatamodeld in Resources */,
 				2BF6FE90242CB37500EA7C4A /* LaunchScreen.storyboard in Resources */,
 				2BF6FE8D242CB37500EA7C4A /* Assets.xcassets in Resources */,
 				2BF6FE8B242CB36F00EA7C4A /* Main.storyboard in Resources */,
@@ -223,7 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */,
+				2B16571E243E5D7E00FF7522 /* Authentication+CoreDataClass.swift in Sources */,
 				2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */,
+				2B16571F243E5D7E00FF7522 /* Authentication+CoreDataProperties.swift in Sources */,
+				2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */,
 				2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */,
 				2BF6FE98242CB6BE00EA7C4A /* UIExtensions.swift in Sources */,
 				2BF6FE9A242CC8B800EA7C4A /* RegistrationViewController.swift in Sources */,
@@ -426,6 +464,18 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B16571A243E3F6500FF7522 /* goAmaze.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B165719243E3F6500FF7522 /* goAmaze.xcdatamodel */,
+			);
+			currentVersion = 2B165719243E3F6500FF7522 /* goAmaze.xcdatamodel */;
+			path = goAmaze.xcdatamodeld;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2BF6FE78242CB36E00EA7C4A /* Project object */;
 }
