@@ -27,8 +27,21 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func signInUser(_ sender: UIButton) {
-        
+     
+        let user = CoreDataService.shared.fetchData()
+        for i in user{
+            if (i.email == userEmail.text) && (i.password == userPassword.text){
+                print("Login Successfull")
+                print(i.email ?? "")
+                print(i.password ?? "")
+                return
+            }else{
+                print("Invalid Credentials")
+                return
+            }
+        }
     }
+    
     @IBAction func registerUser(_ sender: Any) {
         let registerUserVC = RegistrationViewController.shareInstance()
         registerUserVC.modalPresentationStyle = .fullScreen
