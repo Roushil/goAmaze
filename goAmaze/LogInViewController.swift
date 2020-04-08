@@ -26,6 +26,9 @@ class LogInViewController: UIViewController {
     }
     
     
+    @IBAction func signInUser(_ sender: UIButton) {
+        
+    }
     @IBAction func registerUser(_ sender: Any) {
         
         let registerUserVC = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
