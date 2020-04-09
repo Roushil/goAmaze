@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B16571E243E5D7E00FF7522 /* Authentication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */; };
-		2B16571F243E5D7E00FF7522 /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */; };
 		2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B165723243E5E1300FF7522 /* CoreDataService.swift */; };
 		2B165725243E64E700FF7522 /* goAmaze.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 2B16571A243E3F6500FF7522 /* goAmaze.xcdatamodeld */; };
 		2B3E09E4243F87F600F44D74 /* MainContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E09E3243F87F600F44D74 /* MainContentViewController.swift */; };
@@ -24,6 +22,8 @@
 		2B3E09FB243F894600F44D74 /* Product_List.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3E09FA243F894500F44D74 /* Product_List.json */; };
 		2B3E0A04243F9C3E00F44D74 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A02243F9C3E00F44D74 /* SlideInTransition.swift */; };
 		2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */; };
+		2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */; };
+		2B3E0A0E243FA06900F44D74 /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */; };
 		2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */; };
 		2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */; };
 		2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */; };
@@ -38,8 +38,6 @@
 /* Begin PBXFileReference section */
 		0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.release.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.release.xcconfig"; sourceTree = "<group>"; };
 		2B165719243E3F6500FF7522 /* goAmaze.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goAmaze.xcdatamodel; sourceTree = "<group>"; };
-		2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		2B165723243E5E1300FF7522 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2B3E09E3243F87F600F44D74 /* MainContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewController.swift; sourceTree = "<group>"; };
 		2B3E09E5243F88B800F44D74 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -54,6 +52,8 @@
 		2B3E09FA243F894500F44D74 /* Product_List.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product_List.json; sourceTree = "<group>"; };
 		2B3E0A02243F9C3E00F44D74 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		2B16571B243E5D5B00FF7522 /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				2B16571C243E5D7D00FF7522 /* Authentication+CoreDataClass.swift */,
-				2B16571D243E5D7D00FF7522 /* Authentication+CoreDataProperties.swift */,
+				2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */,
+				2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */,
 			);
 			path = "Core Data Models";
 			sourceTree = "<group>";
@@ -337,14 +337,14 @@
 				2B3E09E4243F87F600F44D74 /* MainContentViewController.swift in Sources */,
 				2B3E09EB243F88CE00F44D74 /* Objects.swift in Sources */,
 				2B3E09E6243F88B800F44D74 /* APIManager.swift in Sources */,
-				2B16571E243E5D7E00FF7522 /* Authentication+CoreDataClass.swift in Sources */,
 				2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */,
-				2B16571F243E5D7E00FF7522 /* Authentication+CoreDataProperties.swift in Sources */,
+				2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */,
 				2B3E09F9243F891900F44D74 /* ContentViewModel.swift in Sources */,
 				2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */,
 				2B3E09F4243F88E500F44D74 /* SplitBannerCell.swift in Sources */,
 				2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */,
 				2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */,
+				2B3E0A0E243FA06900F44D74 /* Authentication+CoreDataProperties.swift in Sources */,
 				2BF6FE98242CB6BE00EA7C4A /* UIExtensions.swift in Sources */,
 				2BF6FE9A242CC8B800EA7C4A /* RegistrationViewController.swift in Sources */,
 				2B3E09EC243F88CE00F44D74 /* Content.swift in Sources */,
