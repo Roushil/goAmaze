@@ -22,6 +22,8 @@
 		2B3E09F6243F88E500F44D74 /* SplitBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3E09F2243F88E500F44D74 /* SplitBannerCell.xib */; };
 		2B3E09F9243F891900F44D74 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E09F8243F891900F44D74 /* ContentViewModel.swift */; };
 		2B3E09FB243F894600F44D74 /* Product_List.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3E09FA243F894500F44D74 /* Product_List.json */; };
+		2B3E0A04243F9C3E00F44D74 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A02243F9C3E00F44D74 /* SlideInTransition.swift */; };
+		2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */; };
 		2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */; };
 		2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */; };
 		2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */; };
@@ -50,6 +52,8 @@
 		2B3E09F2243F88E500F44D74 /* SplitBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitBannerCell.xib; sourceTree = "<group>"; };
 		2B3E09F8243F891900F44D74 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2B3E09FA243F894500F44D74 /* Product_List.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product_List.json; sourceTree = "<group>"; };
+		2B3E0A02243F9C3E00F44D74 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2B3E0A06243F9C4900F44D74 /* Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+				2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */,
+				2B3E0A02243F9C3E00F44D74 /* SlideInTransition.swift */,
+			);
+			path = "Menu Bar";
+			sourceTree = "<group>";
+		};
 		2BF6FE77242CB36E00EA7C4A = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 			children = (
 				2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */,
 				2BF6FE85242CB36F00EA7C4A /* SceneDelegate.swift */,
+				2B3E0A06243F9C4900F44D74 /* Menu Bar */,
 				2B165720243E5D9400FF7522 /* Extensions */,
 				2B16571B243E5D5B00FF7522 /* Core Data Models */,
 				2B165722243E5DEB00FF7522 /* Services */,
@@ -319,6 +333,7 @@
 			files = (
 				2B3E09F5243F88E500F44D74 /* BannerTableViewCell.swift in Sources */,
 				2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */,
+				2B3E0A04243F9C3E00F44D74 /* SlideInTransition.swift in Sources */,
 				2B3E09E4243F87F600F44D74 /* MainContentViewController.swift in Sources */,
 				2B3E09EB243F88CE00F44D74 /* Objects.swift in Sources */,
 				2B3E09E6243F88B800F44D74 /* APIManager.swift in Sources */,
@@ -329,6 +344,7 @@
 				2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */,
 				2B3E09F4243F88E500F44D74 /* SplitBannerCell.swift in Sources */,
 				2BF6FE86242CB36F00EA7C4A /* SceneDelegate.swift in Sources */,
+				2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */,
 				2BF6FE98242CB6BE00EA7C4A /* UIExtensions.swift in Sources */,
 				2BF6FE9A242CC8B800EA7C4A /* RegistrationViewController.swift in Sources */,
 				2B3E09EC243F88CE00F44D74 /* Content.swift in Sources */,
