@@ -8,17 +8,38 @@
 
 import Foundation
 import UIKit
+import GoogleSignIn
 
 class MainContentViewController: UIViewController {
     
     var contentModel: [Content]?
     var contentTableView: UITableView!
     fileprivate let kCommerceListTableViewHeight: CGFloat = 200
+    let transistion = SlideInTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJSONData()
     }
+    
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
+      GIDSignIn.sharedInstance().signOut()
+        print("Successfully Signed Out")
+        let signInVC = LogInViewController.shareInstance()
+        signInVC.modalPresentationStyle = .fullScreen
+        self.present(signInVC, animated: true)
+    }
+    
+    @IBAction func didSelectedMenuItem(_ sender: Any) {
+        guard let viewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
+        viewController.didMenuTapped = { menuType in
+            self.transitionToMainView(menuType)
+        }
+        viewController.modalPresentationStyle = .overCurrentContext
+        viewController.transitioningDelegate = self
+        present(viewController, animated: true)
+    }
+
     
     func setupTableView() {
         
@@ -48,6 +69,16 @@ class MainContentViewController: UIViewController {
             }
         }
     }
+    
+    func transitionToMainView(_ menuType: MenuType) {
+        switch menuType {
+        case .profile: break
+        case .home: break
+        case .cart: break
+        case .about: break
+        }
+    }
+
 }
 
 
@@ -82,5 +113,17 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
             break
         }
         return UITableViewCell()
+    }
+}
+
+extension MainContentViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transistion.isPresenting = true
+        return transistion
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transistion.isPresenting = false
+        return transistion
     }
 }

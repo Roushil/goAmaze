@@ -31,9 +31,7 @@ class LogInViewController: UIViewController {
         let user = CoreDataService.shared.fetchData()
         for i in user{
             if (i.email == userEmail.text) && (i.password == userPassword.text){
-                print("Login Successfull")
-                print(i.email ?? "")
-                print(i.password ?? "")
+                self.dismiss(animated: true, completion: nil)
                 return
             }else{
                 print("Invalid Credentials")
@@ -48,10 +46,6 @@ class LogInViewController: UIViewController {
         present(registerUserVC,animated: true, completion: nil)
     }
     
-    @IBAction func didTapSignOut(_ sender: AnyObject) {
-      GIDSignIn.sharedInstance().signOut()
-        print("Successfully Signed Out")
-    }
     
     fileprivate func setBordersAndDelegates(){
         
@@ -77,5 +71,10 @@ extension LogInViewController: UITextFieldDelegate{
         
         textField.underline(changeColor: true)
     }
+}
 
+extension LogInViewController{
+    static func shareInstance() -> LogInViewController{
+        LogInViewController.instantiateFromStoryboard()
+    }
 }
