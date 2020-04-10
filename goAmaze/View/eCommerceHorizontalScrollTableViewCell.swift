@@ -56,7 +56,6 @@ extension eCommerceHorizontalScrollTableViewCell: UICollectionViewDataSource {
                 cell.setupItemsInsideCells(itemModels: self.productsModel![indexPath.row])
             }
         }
-        
         return cell
     }
     
@@ -70,7 +69,7 @@ extension eCommerceHorizontalScrollTableViewCell: UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = 144
-        let itemHeight = 241
+        let itemHeight = 270
         return CGSize(width: itemWidth, height: itemHeight)
     }
     

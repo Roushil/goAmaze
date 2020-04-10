@@ -23,6 +23,7 @@ class LogInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         setBordersAndDelegates()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -46,8 +47,9 @@ class LogInViewController: UIViewController {
     }
     
     func moveToMainController() {
-        let mainController = self.storyboard?.instantiateViewController(identifier: "mainViewVC") as? MainContentViewController
-        self.navigationController?.pushViewController(mainController!, animated: true)
+        //let mainController = self.storyboard?.instantiateViewController(identifier: "mainViewVC") as? MainContentViewController
+        let mainController = MainContentViewController.shareInstance()
+        self.navigationController?.pushViewController(mainController, animated: true)
     }
     
     fileprivate func setBordersAndDelegates(){
@@ -73,11 +75,5 @@ extension LogInViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         textField.underline(changeColor: true)
-    }
-}
-
-extension LogInViewController{
-    static func shareInstance() -> LogInViewController{
-        LogInViewController.instantiateFromStoryboard()
     }
 }

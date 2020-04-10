@@ -14,24 +14,17 @@ class MainContentViewController: UIViewController {
     
     var contentModel: [Content]?
     var contentTableView: UITableView!
-    fileprivate let kCommerceListTableViewHeight: CGFloat = 200
     let transistion = SlideInTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJSONData()
-    }
-    
-    @IBAction func didTapSignOut(_ sender: AnyObject) {
-      GIDSignIn.sharedInstance().signOut()
-        print("Successfully Signed Out")
-        let signInVC = LogInViewController.shareInstance()
-        signInVC.modalPresentationStyle = .fullScreen
-        self.present(signInVC, animated: true)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func didSelectedMenuItem(_ sender: Any) {
-        guard let viewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
+
+        let viewController = MenuViewController.shareInstance()
         viewController.didMenuTapped = { menuType in
             self.transitionToMainView(menuType)
         }
@@ -39,7 +32,14 @@ class MainContentViewController: UIViewController {
         viewController.transitioningDelegate = self
         present(viewController, animated: true)
     }
-
+    
+    
+    func signOutUser(){
+        
+        GIDSignIn.sharedInstance().signOut()
+        print("Successfully Signed Out")
+        self.navigationController?.popViewController(animated: true)
+    }
     
     func setupTableView() {
         
@@ -72,11 +72,16 @@ class MainContentViewController: UIViewController {
     }
     
     func transitionToMainView(_ menuType: MenuType) {
+    
         switch menuType {
         case .profile: break
         case .home: break
+        case .orders: break
         case .cart: break
+        case .notifications: break
+        case .ratings: break
         case .about: break
+        case .signOut: signOutUser()
         }
     }
 
@@ -86,11 +91,11 @@ class MainContentViewController: UIViewController {
 extension MainContentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kCommerceListTableViewHeight
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kCommerceListTableViewHeight
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -131,5 +136,11 @@ extension MainContentViewController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transistion.isPresenting = false
         return transistion
+    }
+}
+
+extension MainContentViewController{
+    static func shareInstance() -> MainContentViewController{
+        MainContentViewController.instantiateFromStoryboard()
     }
 }

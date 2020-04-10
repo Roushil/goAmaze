@@ -11,8 +11,12 @@ import UIKit
 enum MenuType: Int {
     case profile
     case home
+    case orders
     case cart
+    case notifications
+    case ratings
     case about
+    case signOut
 }
 
 class MenuViewController: UITableViewController {
@@ -30,5 +34,11 @@ class MenuViewController: UITableViewController {
         dismiss(animated: true, completion: { [weak self] in
             self?.didMenuTapped?(menuType)
         })
+    }
+}
+
+extension MenuViewController{
+    static func shareInstance() -> MenuViewController{
+        MenuViewController.instantiateFromStoryboard()
     }
 }

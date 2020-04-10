@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,26 +20,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="144" height="241"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple_logo_black.svg_-2" translatesAutoresizingMaskIntoConstraints="NO" id="RqF-6e-dzE">
-                                <rect key="frame" x="10" y="8" width="124" height="124"/>
+                                <rect key="frame" x="10" y="8" width="124" height="130"/>
+                                <color key="tintColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="124" id="A5G-JL-1gv"/>
+                                    <constraint firstAttribute="height" constant="130" id="A5G-JL-1gv"/>
                                     <constraint firstAttribute="width" constant="124" id="Rs4-el-YLs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Alcatel Go Watch Black &amp; Dark Red Smartwatch" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-Tm-HZG">
-                                <rect key="frame" x="8" y="140" width="128" height="36"/>
+                                <rect key="frame" x="8" y="146" width="128" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVz-xS-lUd">
-                                <rect key="frame" x="8" y="184" width="128" height="21"/>
+                                <rect key="frame" x="8" y="190" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-Zf-Ze4">
-                                <rect key="frame" x="8" y="213" width="128" height="21"/>
+                                <rect key="frame" x="8" y="219" width="128" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +57,6 @@
                             <constraint firstItem="ftD-Tm-HZG" firstAttribute="top" secondItem="RqF-6e-dzE" secondAttribute="bottom" constant="8" id="fsU-58-bp7"/>
                             <constraint firstItem="t5S-Zf-Ze4" firstAttribute="leading" secondItem="rFc-Dl-Z5d" secondAttribute="leading" constant="8" id="om1-3d-Eaz"/>
                             <constraint firstAttribute="trailing" secondItem="LVz-xS-lUd" secondAttribute="trailing" constant="8" id="pCn-of-DzN"/>
-                            <constraint firstAttribute="bottom" secondItem="t5S-Zf-Ze4" secondAttribute="bottom" constant="7" id="pg0-eK-7xt"/>
                             <constraint firstAttribute="trailing" secondItem="t5S-Zf-Ze4" secondAttribute="trailing" constant="8" id="qLS-cq-Ax4"/>
                             <constraint firstAttribute="trailing" secondItem="ftD-Tm-HZG" secondAttribute="trailing" constant="8" id="qLb-9j-JLL"/>
                             <constraint firstAttribute="height" constant="241" id="rxL-MJ-IBb"/>

@@ -36,14 +36,10 @@ class eCommerceCollectionViewCellItem: UICollectionViewCell {
 
     func setupItemsInsideCells(itemModels: Product) {
         nameLabel.text = itemModels.name
-        priceLabel.text = itemModels.price
+        priceLabel.text = "Rs \(itemModels.price)"
         typeLabel.text = itemModels.type
-        
-        let imageUrl = URL(string: itemModels.imageURL)!
-        let imageData = try! Data(contentsOf: imageUrl)
-        let thumImage = UIImage(data: imageData)
-        imageViewCell.image = thumImage
-        
+        imageViewCell.loadImageUsingCache(image: itemModels.imageURL)
+
     }
     
     override func awakeFromNib() {
