@@ -31,11 +31,10 @@ class LogInViewController: UIViewController {
         let user = CoreDataService.shared.fetchData()
         for i in user{
             if (i.email == userEmail.text) && (i.password == userPassword.text){
-                self.dismiss(animated: true, completion: nil)
-                return
+                moveToMainController()
             }else{
                 print("Invalid Credentials")
-                return
+                
             }
         }
     }
@@ -46,6 +45,10 @@ class LogInViewController: UIViewController {
         present(registerUserVC,animated: true, completion: nil)
     }
     
+    func moveToMainController() {
+        let mainController = self.storyboard?.instantiateViewController(identifier: "mainViewVC") as? MainContentViewController
+        self.navigationController?.pushViewController(mainController!, animated: true)
+    }
     
     fileprivate func setBordersAndDelegates(){
         

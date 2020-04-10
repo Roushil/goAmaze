@@ -53,6 +53,7 @@ class MainContentViewController: UIViewController {
     }
     
     func registerNib() {
+        contentTableView.register(UINib(nibName: "eCommerceHorizontalScrollTableViewCell", bundle: nil), forCellReuseIdentifier: "horizontalScrollViewIdentifier")
         contentTableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "BannerTableViewCell")
         contentTableView.register(UINib(nibName: "SplitBannerCell", bundle: nil), forCellReuseIdentifier: "SplitBannerCell")
     }
@@ -100,6 +101,11 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
         
         guard let content = contentModel?[indexPath.row] else { return UITableViewCell()}
         switch indexPath.row {
+            
+        case 0...3:
+            let cell = contentTableView.dequeueReusableCell(withIdentifier: "horizontalScrollViewIdentifier", for: indexPath) as! eCommerceHorizontalScrollTableViewCell
+            cell.setupItemsinCells(itemsModel: content)
+            return cell
         case 4:
             let cell = contentTableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell", for: indexPath) as! BannerTableViewCell
             cell.bannerImage.loadImageUsingCache(image: content.bannerImage ?? "")
