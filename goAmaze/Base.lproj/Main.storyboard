@@ -19,7 +19,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9zN-hI-2qs">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="CDm-X4-yCf">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didSelectedMenuItem:" destination="3DD-9P-9t8" id="e7p-Av-0ZG"/>
                             </connections>
@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfy-kr-EO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3406" y="120"/>
+            <point key="canvasLocation" x="3545" y="121"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -444,13 +444,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-BD-sLZ">
                                                     <rect key="frame" x="20" y="11" width="374" height="48"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="bP0-BD-sLZ" firstAttribute="leading" secondItem="Tcf-4A-bnc" secondAttribute="leadingMargin" id="SXI-N7-ltY"/>
                                                 <constraint firstItem="bP0-BD-sLZ" firstAttribute="bottom" secondItem="Tcf-4A-bnc" secondAttribute="bottomMargin" id="YLZ-1c-X4C"/>
@@ -680,7 +680,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qh-kv-Kh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4081" y="121"/>
+            <point key="canvasLocation" x="4245" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fQE-u9-Wh3">
@@ -711,6 +711,6 @@
         <image name="Rate" width="100" height="100"/>
         <image name="Signout" width="100" height="100"/>
         <image name="clear.fill" catalog="system" width="128" height="114"/>
-        <image name="menu" width="64" height="64"/>
+        <image name="menu" width="60" height="60"/>
     </resources>
 </document>
