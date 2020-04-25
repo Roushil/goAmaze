@@ -22,7 +22,6 @@ enum MenuType: Int {
 class MenuViewController: UITableViewController {
     
     var didMenuTapped: ((MenuType) -> Void)?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

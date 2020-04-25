@@ -51,7 +51,6 @@ class LogInViewController: UIViewController {
     }
     
     func moveToMainController() {
-        //let mainController = self.storyboard?.instantiateViewController(identifier: "mainViewVC") as? MainContentViewController
         let mainController = MainContentViewController.shareInstance()
         self.navigationController?.pushViewController(mainController, animated: true)
     }

@@ -9,31 +9,41 @@
 import Foundation
 import UIKit
 import GoogleSignIn
+import SideMenu
 
 class MainContentViewController: UIViewController {
     
     var contentModel: [Content]?
     var contentTableView: UITableView!
     let transistion = SlideInTransition()
+    var menu: SideMenuNavigationController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setMenuItems()
         fetchJSONData()
         self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func didSelectedMenuItem(_ sender: Any) {
-
-        let viewController = MenuViewController.shareInstance()
-        viewController.didMenuTapped = { menuType in
-            self.transitionToMainView(menuType)
-        }
-        viewController.modalPresentationStyle = .overCurrentContext
-        viewController.transitioningDelegate = self
-        present(viewController, animated: true)
+        present(menu!, animated: true, completion: nil)
     }
     
-    
+    func setMenuItems(){
+        
+        let menuVC = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+        menu = SideMenuNavigationController(rootViewController: menuVC)
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: true)
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
+        menuVC.didMenuTapped = { menuType in
+            self.transitionToMainView(menuType)
+        }
+    }
+
     func signOutUser(){
         
         GIDSignIn.sharedInstance().signOut()
@@ -127,17 +137,6 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension MainContentViewController: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transistion.isPresenting = true
-        return transistion
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transistion.isPresenting = false
-        return transistion
-    }
-}
 
 extension MainContentViewController{
     static func shareInstance() -> MainContentViewController{

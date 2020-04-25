@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         print("Document Directory: ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
-        
         GIDSignIn.sharedInstance().clientID = "135931832578-lf51iife76fo35rusjl967p8f8fm2m7e.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         return true
