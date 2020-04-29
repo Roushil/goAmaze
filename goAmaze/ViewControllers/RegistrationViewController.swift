@@ -55,9 +55,14 @@ class RegistrationViewController: UIViewController {
 extension RegistrationViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+       } else {
+            textField.resignFirstResponder()
+       }
         textField.underline(changeColor: false)
-        textField.resignFirstResponder()
-        return true
+       return false
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

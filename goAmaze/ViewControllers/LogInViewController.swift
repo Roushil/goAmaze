@@ -36,7 +36,7 @@ class LogInViewController: UIViewController {
         let user = CoreDataService.shared.fetchData()
         for i in user{
             if (i.email == userEmail.text) && (i.password == userPassword.text){
-                moveToMainController()
+                moveToMainController(profileName: i.name)
             }else{
                 print("Invalid Credentials")
                 
@@ -50,8 +50,9 @@ class LogInViewController: UIViewController {
         present(registerUserVC,animated: true, completion: nil)
     }
     
-    func moveToMainController() {
+    func moveToMainController(profileName: String?) {
         let mainController = MainContentViewController.shareInstance()
+        mainController.profileName = profileName
         self.navigationController?.pushViewController(mainController, animated: true)
     }
     
@@ -59,6 +60,7 @@ class LogInViewController: UIViewController {
         
         userEmail.delegate = self
         userPassword.delegate = self
+        userEmail.becomeFirstResponder()
         logInLabel.underline()
         userEmail.underline(changeColor: false)
         userPassword.underline(changeColor: false)
@@ -70,10 +72,15 @@ extension LogInViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
         textField.underline(changeColor: false)
-        textField.resignFirstResponder()
-        return true
+        return false
     }
+
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         

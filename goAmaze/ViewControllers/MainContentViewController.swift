@@ -15,8 +15,8 @@ class MainContentViewController: UIViewController {
     
     var contentModel: [Content]?
     var contentTableView: UITableView!
-    let transistion = SlideInTransition()
     var menu: SideMenuNavigationController? = nil
+    var profileName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,7 @@ class MainContentViewController: UIViewController {
     func setMenuItems(){
         
         let menuVC = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+        menuVC.userName = profileName
         menu = SideMenuNavigationController(rootViewController: menuVC)
         menu?.leftSide = true
         menu?.setNavigationBarHidden(true, animated: true)
