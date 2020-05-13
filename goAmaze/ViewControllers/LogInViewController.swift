@@ -39,7 +39,6 @@ class LogInViewController: UIViewController {
                 moveToMainController(profileName: i.name)
             }else{
                 print("Invalid Credentials")
-                
             }
         }
     }

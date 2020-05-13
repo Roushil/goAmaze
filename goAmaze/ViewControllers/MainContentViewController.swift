@@ -82,6 +82,14 @@ class MainContentViewController: UIViewController {
         }
     }
     
+    func showAlertForNotification(){
+        
+        let alert = UIAlertController(title: "Not Available", message: "The notification is not available at the moment. Please come back later", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func transitionToMainView(_ menuType: MenuType) {
     
         switch menuType {
@@ -89,7 +97,7 @@ class MainContentViewController: UIViewController {
         case .home: break
         case .orders: break
         case .cart: break
-        case .notifications: break
+        case .notifications: showAlertForNotification()
         case .ratings: break
         case .about: break
         case .signOut: signOutUser()

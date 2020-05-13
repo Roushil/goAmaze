@@ -29,7 +29,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func signUpUser(_ sender: Any) {
-        guard let name = userEmailField.text , let email = userEmailField.text, let passwd = setPasswordField.text else { return }
+        guard let name = userNameField.text , let email = userEmailField.text, let passwd = setPasswordField.text else { return }
         CoreDataService.shared.saveData(name: name, email: email, password: passwd)
         self.dismiss(animated: true, completion: nil)
     }
