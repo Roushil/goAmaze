@@ -23,6 +23,8 @@
 		2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */; };
 		2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */; };
 		2B3E0A0E243FA06900F44D74 /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */; };
+		2BB235BC246C22980089CE01 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB235BB246C22980089CE01 /* AboutViewController.swift */; };
+		2BB235BE246C4D680089CE01 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB235BD246C4D680089CE01 /* ProductViewController.swift */; };
 		2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */; };
 		2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */; };
 		2BF6FE8B242CB36F00EA7C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6FE89242CB36F00EA7C4A /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		2B3E0A03243F9C3E00F44D74 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BB235BB246C22980089CE01 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		2BB235BD246C4D680089CE01 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				2BF6FE99242CC8B800EA7C4A /* RegistrationViewController.swift */,
 				2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */,
 				2B3E09E3243F87F600F44D74 /* MainContentViewController.swift */,
+				2BB235BB246C22980089CE01 /* AboutViewController.swift */,
+				2BB235BD246C4D680089CE01 /* ProductViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */,
 				2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */,
 				2B3E09F9243F891900F44D74 /* ContentViewModel.swift in Sources */,
+				2BB235BC246C22980089CE01 /* AboutViewController.swift in Sources */,
 				2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */,
 				2B3E09F4243F88E500F44D74 /* SplitBannerCell.swift in Sources */,
 				2B3E0A05243F9C3E00F44D74 /* MenuViewController.swift in Sources */,
@@ -356,6 +363,7 @@
 				2BF6FE9A242CC8B800EA7C4A /* RegistrationViewController.swift in Sources */,
 				4781A16F24404C0400C8D73B /* eCommerceCollectionViewCellItem.swift in Sources */,
 				2B3E09EC243F88CE00F44D74 /* Content.swift in Sources */,
+				2BB235BE246C4D680089CE01 /* ProductViewController.swift in Sources */,
 				2B3E09ED243F88CE00F44D74 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

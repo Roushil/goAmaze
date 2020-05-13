@@ -8,9 +8,11 @@
 
 import UIKit
 
+
 class eCommerceHorizontalScrollTableViewCell: UITableViewCell {
     
     var productsModel: [Product]?
+    var productDetail: ((Product) -> Void)!
     
     @IBOutlet weak var defaultcollectionView: UICollectionView!
     
@@ -22,17 +24,11 @@ class eCommerceHorizontalScrollTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         defaultcollectionView.register(UINib(nibName: "eCommerceCollectionViewCellItem", bundle: nil), forCellWithReuseIdentifier: "eCommerceCollectionCellIdentifierItem")
         defaultcollectionView.showsHorizontalScrollIndicator = false
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
     
     func setupItemsinCells(itemsModel: Content) {
         nameLabel.text = itemsModel.name
@@ -61,6 +57,8 @@ extension eCommerceHorizontalScrollTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard let products = productsModel else { return }
+        productDetail(products[indexPath.row])
     }
 }
 

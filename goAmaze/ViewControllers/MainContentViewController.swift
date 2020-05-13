@@ -84,10 +84,15 @@ class MainContentViewController: UIViewController {
     
     func showAlertForNotification(){
         
-        let alert = UIAlertController(title: "Not Available", message: "The notification is not available at the moment. Please come back later", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Not Available", message: "Your Notification is not available at the moment. Please try again later", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showAbout(){
+        let vc = AboutViewController.shareInstance()
+        present(vc, animated: true, completion: nil)
     }
     
     func transitionToMainView(_ menuType: MenuType) {
@@ -99,13 +104,11 @@ class MainContentViewController: UIViewController {
         case .cart: break
         case .notifications: showAlertForNotification()
         case .ratings: break
-        case .about: break
+        case .about: showAbout()
         case .signOut: signOutUser()
         }
     }
-
 }
-
 
 extension MainContentViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -129,6 +132,16 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
         case 0...3:
             let cell = contentTableView.dequeueReusableCell(withIdentifier: "horizontalScrollViewIdentifier", for: indexPath) as! eCommerceHorizontalScrollTableViewCell
             cell.setupItemsinCells(itemsModel: content)
+            
+            cell.productDetail = { [weak self] (product) in
+                
+                guard let _self = self else { return }
+                let vc = ProductViewController.shareInstance()
+                vc.product = product
+                _self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            
             return cell
         case 4:
             let cell = contentTableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell", for: indexPath) as! BannerTableViewCell
