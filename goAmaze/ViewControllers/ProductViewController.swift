@@ -38,6 +38,11 @@ class ProductViewController: UIViewController {
         productPrice.text = "\(rupee)\(price ?? "")"
         productImage.loadImageUsingCache(image: imageURL)
     }
+    @IBAction func buyProductTapped(_ sender: UIButton) {
+        
+        let orderVc = PlaceOrderViewController.shareInstance()
+        navigationController?.pushViewController(orderVc, animated: true)
+    }
 }
 
 extension ProductViewController{

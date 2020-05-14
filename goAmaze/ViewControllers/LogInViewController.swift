@@ -16,6 +16,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var logInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class LogInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         setBordersAndDelegates()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +40,7 @@ class LogInViewController: UIViewController {
             if (i.email == userEmail.text) && (i.password == userPassword.text){
                 moveToMainController(profileName: i.name)
             }else{
-                print("Invalid Credentials")
+                logInButton.shake()
             }
         }
     }
@@ -84,5 +86,9 @@ extension LogInViewController: UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         textField.underline(changeColor: true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
     }
 }

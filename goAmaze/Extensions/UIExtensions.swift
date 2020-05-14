@@ -46,7 +46,7 @@ extension UILabel{
         
         let border = CALayer()
         let width = CGFloat(4.0)
-        border.borderColor = UIColor.darkGray.cgColor
+        border.borderColor = UIColor.black.cgColor
         border.frame = CGRect(x: 0,
                               y: self.frame.size.height - width,
                               width: 200,
@@ -80,5 +80,20 @@ extension UIButton{
         
         self.layer.borderColor = UIColor.green.cgColor
         self.layer.borderWidth = 1.0
+    }
+    
+    func shake(){
+        
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
+        let fromValue = NSValue(cgPoint: fromPoint)
+        let toPoint = CGPoint(x: center.x + 5, y: center.y)
+        let toValue = NSValue(cgPoint: toPoint)
+        shake.fromValue = fromValue
+        shake.toValue = toValue
+        layer.add(shake, forKey: nil)
     }
 }
