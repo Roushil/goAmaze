@@ -972,6 +972,9 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addToCartTapped:" destination="oKP-sH-fZk" eventType="touchUpInside" id="kr8-wI-CWy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1229,7 +1232,41 @@ Customs authorities require the value of the gift item to be stated directly on 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GvW-Wz-yvY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6247.826086956522" y="118.52678571428571"/>
+            <point key="canvasLocation" x="6923" y="120"/>
+        </scene>
+        <!--Order List View Controller-->
+        <scene sceneID="yFq-zh-07M">
+            <objects>
+                <viewController storyboardIdentifier="OrderListViewController" id="3iZ-Gc-RXu" customClass="OrderListViewController" customModule="goAmaze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yXp-Su-XLi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T59-Dt-l2g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3iZ-Gc-RXu" id="nq6-FT-VHc"/>
+                                    <outlet property="delegate" destination="3iZ-Gc-RXu" id="X9r-ia-bE5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jYD-1L-U4Q" firstAttribute="bottom" secondItem="T59-Dt-l2g" secondAttribute="bottom" id="7Pw-ya-NSf"/>
+                            <constraint firstItem="T59-Dt-l2g" firstAttribute="top" secondItem="jYD-1L-U4Q" secondAttribute="top" id="R2x-ue-nvy"/>
+                            <constraint firstItem="jYD-1L-U4Q" firstAttribute="trailing" secondItem="T59-Dt-l2g" secondAttribute="trailing" id="Rbh-iH-6Er"/>
+                            <constraint firstItem="T59-Dt-l2g" firstAttribute="leading" secondItem="jYD-1L-U4Q" secondAttribute="leading" id="eLz-wi-75c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jYD-1L-U4Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="orderListTableView" destination="T59-Dt-l2g" id="0yY-3q-F16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiK-uO-VEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7664" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fQE-u9-Wh3">
@@ -1248,6 +1285,74 @@ Customs authorities require the value of the gift item to be stated directly on 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECO-Sv-Th4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1239" y="121"/>
+        </scene>
+        <!--Add To Cart View Controller-->
+        <scene sceneID="2YO-bg-T4F">
+            <objects>
+                <viewController storyboardIdentifier="AddToCartViewController" id="Ejc-vk-sIX" customClass="AddToCartViewController" customModule="goAmaze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MGZ-qn-S5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-9J-iEY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ejc-vk-sIX" id="DC4-Xk-CFe"/>
+                                    <outlet property="delegate" destination="Ejc-vk-sIX" id="ya0-r1-nhD"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="aQo-jp-RHd">
+                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-uG-2zu">
+                                        <rect key="frame" x="16" y="15" width="94" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-8h-A5R">
+                                        <rect key="frame" x="198" y="12" width="200" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="pTe-T7-K2x"/>
+                                        </constraints>
+                                        <state key="normal" title="Proceed"/>
+                                        <connections>
+                                            <action selector="placeORder" destination="Ejc-vk-sIX" eventType="touchUpInside" id="v1m-3W-JbS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NbU-uG-2zu" firstAttribute="leading" secondItem="aQo-jp-RHd" secondAttribute="leading" constant="16" id="6Cz-DL-7VG"/>
+                                    <constraint firstItem="GkD-8h-A5R" firstAttribute="top" secondItem="aQo-jp-RHd" secondAttribute="top" constant="12" id="LAL-Db-3Je"/>
+                                    <constraint firstAttribute="bottom" secondItem="NbU-uG-2zu" secondAttribute="bottom" constant="15" id="OhW-49-CUn"/>
+                                    <constraint firstItem="NbU-uG-2zu" firstAttribute="top" secondItem="aQo-jp-RHd" secondAttribute="top" constant="15" id="P8f-ah-Rrj"/>
+                                    <constraint firstAttribute="trailing" secondItem="GkD-8h-A5R" secondAttribute="trailing" constant="16" id="TVa-j8-CQn"/>
+                                    <constraint firstAttribute="bottom" secondItem="GkD-8h-A5R" secondAttribute="bottom" constant="12" id="y6N-yc-reH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="leading" secondItem="aQo-jp-RHd" secondAttribute="leading" id="4d7-AR-irO"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="top" secondItem="MGZ-qn-S5L" secondAttribute="top" id="9eu-dq-KL3"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="trailing" secondItem="aQo-jp-RHd" secondAttribute="trailing" id="TJ2-P3-Kr7"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="bottom" secondItem="aQo-jp-RHd" secondAttribute="bottom" id="q55-aB-J2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mhG-16-pSR"/>
+                    </view>
+                    <connections>
+                        <outlet property="cartTableView" destination="yQK-9J-iEY" id="dXW-3A-lhn"/>
+                        <outlet property="placeOrderButton" destination="GkD-8h-A5R" id="BEw-5K-oCU"/>
+                        <outlet property="placeOrderView" destination="aQo-jp-RHd" id="Ymm-e8-laB"/>
+                        <outlet property="priceLable" destination="NbU-uG-2zu" id="wWF-Tn-zqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACf-e2-hxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6228" y="120"/>
         </scene>
     </scenes>
     <resources>

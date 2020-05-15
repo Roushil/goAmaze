@@ -41,7 +41,19 @@ class ProductViewController: UIViewController {
     @IBAction func buyProductTapped(_ sender: UIButton) {
         
         let orderVc = PlaceOrderViewController.shareInstance()
+        orderVc.product = product
         navigationController?.pushViewController(orderVc, animated: true)
+    }
+    
+    @IBAction func addToCartTapped(_ sender: UIButton) {
+        
+        ContentViewModel.shared.cartList.append(CartData(cartItem_Name: product.name,
+                                                         cartItem_Price: product.price,
+                                                         cartItem_URL: product.imageURL,
+                                                         cartItem_Type: product.type))
+        
+        let cartController = self.storyboard?.instantiateViewController(identifier: "AddToCartViewController") as! AddToCartViewController
+        self.navigationController?.pushViewController(cartController, animated: true)
     }
 }
 
