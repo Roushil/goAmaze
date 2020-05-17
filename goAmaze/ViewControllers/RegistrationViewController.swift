@@ -10,8 +10,7 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
-    @IBOutlet weak var newAccountLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
+
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var userEmailField: UITextField!
     @IBOutlet weak var setPasswordField: UITextField!
@@ -36,16 +35,14 @@ class RegistrationViewController: UIViewController {
     
     fileprivate func setBordersAndDelegates(){
         
-        loginButton.drawBorder()
+
         userNameField.delegate = self
         userEmailField.delegate = self
         setPasswordField.delegate = self
         confirmPasswordField.delegate = self
-        newAccountLabel.underline()
         userNameField.underline(changeColor: false)
         userEmailField.underline(changeColor: false)
         setPasswordField.underline(changeColor: false)
-        confirmPasswordField.underline(changeColor: false)
         alertView.isHidden = true
         signUpButton.isUserInteractionEnabled = false
     }
@@ -56,12 +53,11 @@ extension RegistrationViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        
-       if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+        if let nextField = textField.superview?.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
        } else {
             textField.resignFirstResponder()
        }
-        textField.underline(changeColor: false)
        return false
     }
     

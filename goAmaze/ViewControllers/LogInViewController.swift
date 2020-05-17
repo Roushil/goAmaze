@@ -11,8 +11,7 @@ import GoogleSignIn
 
 class LogInViewController: UIViewController {
     
-    @IBOutlet weak var logInLabel: UILabel!
-    @IBOutlet weak var registerUserButton: UIButton!
+
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
@@ -60,35 +59,24 @@ class LogInViewController: UIViewController {
     fileprivate func setBordersAndDelegates(){
         
         userEmail.delegate = self
-        userPassword.delegate = self
         userEmail.becomeFirstResponder()
-        logInLabel.underline()
         userEmail.underline(changeColor: false)
-        userPassword.underline(changeColor: false)
-        registerUserButton.drawBorder()
     }
 }
 
 extension LogInViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+        textField.underline(changeColor: false)
+        if let nextField = textField.superview?.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }
-        textField.underline(changeColor: false)
         return false
     }
-
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
         textField.underline(changeColor: true)
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
     }
 }

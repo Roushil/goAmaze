@@ -35,6 +35,7 @@
 		2BE92B9D246EA26A00B7B8AE /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE92B9C246EA26A00B7B8AE /* OrderListViewController.swift */; };
 		2BE92BA0246EA36900B7B8AE /* eCommerceOrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE92B9E246EA36900B7B8AE /* eCommerceOrdersViewCell.swift */; };
 		2BE92BA1246EA36900B7B8AE /* eCommerceOrdersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE92B9F246EA36900B7B8AE /* eCommerceOrdersViewCell.xib */; };
+		2BE92BA5246EF27D00B7B8AE /* StarRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE92BA4246EF27D00B7B8AE /* StarRateViewController.swift */; };
 		2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */; };
 		2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */; };
 		2BF6FE8B242CB36F00EA7C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6FE89242CB36F00EA7C4A /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		2BE92B9C246EA26A00B7B8AE /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		2BE92B9E246EA36900B7B8AE /* eCommerceOrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceOrdersViewCell.swift; sourceTree = "<group>"; };
 		2BE92B9F246EA36900B7B8AE /* eCommerceOrdersViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = eCommerceOrdersViewCell.xib; sourceTree = "<group>"; };
+		2BE92BA4246EF27D00B7B8AE /* StarRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRateViewController.swift; sourceTree = "<group>"; };
 		2BF6FE80242CB36F00EA7C4A /* goAmaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goAmaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF6FE83242CB36F00EA7C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF6FE87242CB36F00EA7C4A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				2B4BB7B9246D47DC002B2AA7 /* PlaceOrderViewController.swift */,
 				2BE92B8C246E7F8100B7B8AE /* AddToCartViewController.swift */,
 				2BE92B9C246EA26A00B7B8AE /* OrderListViewController.swift */,
+				2BE92BA4246EF27D00B7B8AE /* StarRateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				2B3E09E6243F88B800F44D74 /* APIManager.swift in Sources */,
 				2BF6FE84242CB36F00EA7C4A /* AppDelegate.swift in Sources */,
 				2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */,
+				2BE92BA5246EF27D00B7B8AE /* StarRateViewController.swift in Sources */,
 				2BE92BA0246EA36900B7B8AE /* eCommerceOrdersViewCell.swift in Sources */,
 				2B4BB7BA246D47DC002B2AA7 /* PlaceOrderViewController.swift in Sources */,
 				2B3E09F9243F891900F44D74 /* ContentViewModel.swift in Sources */,

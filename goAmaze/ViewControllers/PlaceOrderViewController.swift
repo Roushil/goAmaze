@@ -32,15 +32,13 @@ class PlaceOrderViewController: UIViewController {
 
     @IBAction func placeOrderTapped(_ sender: UIButton) {
         
-//        if (userName.text!.isEmpty || address1.text!.isEmpty || address2.text!.isEmpty || city.text!.isEmpty || state.text!.isEmpty || mobNumber.text!.isEmpty || postalCode.text!.isEmpty || cardName.text!.isEmpty || cardNumber.text!.isEmpty || cardExpiryDate.text!.isEmpty || cardCVV.text!.isEmpty){
-//
-//            orderProduct.shake()
-//        }else{
-//            placeOrder()
-//
-//        }
-        
-        placeOrder()
+        if (userName.text!.isEmpty || address1.text!.isEmpty || address2.text!.isEmpty || city.text!.isEmpty || state.text!.isEmpty || mobNumber.text!.isEmpty || postalCode.text!.isEmpty || cardName.text!.isEmpty || cardNumber.text!.isEmpty || cardExpiryDate.text!.isEmpty || cardCVV.text!.isEmpty){
+
+            orderProduct.shake()
+            showAlert()
+        }else{
+            placeOrder()
+        }
     }
     
     func setDelegates(){
@@ -55,6 +53,13 @@ class PlaceOrderViewController: UIViewController {
         cardNumber.delegate = self
         cardExpiryDate.delegate = self
         cardCVV.delegate = self
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "Invalid Data", message: "It is mandatory to fill all the details", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     func placeOrder(){

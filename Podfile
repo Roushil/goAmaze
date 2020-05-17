@@ -5,4 +5,5 @@ target 'goAmaze' do
 		
 	pod 'GoogleSignIn'
 	pod 'SideMenu'
+  pod 'Cosmos'
 end

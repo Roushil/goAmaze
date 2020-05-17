@@ -63,7 +63,7 @@ extension UITextField{
         
         let border = CALayer()
         let width = CGFloat(1.0)
-        changeColor == true ? (border.borderColor = UIColor.green.cgColor) : (border.borderColor = UIColor.darkGray.cgColor)
+        changeColor == true ? (border.borderColor = UIColor.systemOrange.cgColor) : (border.borderColor = UIColor.darkGray.cgColor)
         border.frame = CGRect(x: 0,
                               y: self.frame.size.height - width,
                               width: self.frame.size.width,
