@@ -41,6 +41,10 @@ class PlaceOrderViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     func setDelegates(){
         userName.delegate = self
         address1.delegate = self

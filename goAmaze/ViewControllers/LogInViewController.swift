@@ -19,11 +19,11 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         setBordersAndDelegates()
-        
+        signInGoogleUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,14 +31,15 @@ class LogInViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    
     @IBAction func signInUser(_ sender: UIButton) {
-     
+        
         let user = CoreDataService.shared.fetchData()
         for i in user{
             if (i.email == userEmail.text) && (i.password == userPassword.text){
-                moveToMainController(profileName: i.name)
-            }else{
+                Profile.shared.userName = i.name
+                moveToMainController()
+            }
+            else{
                 logInButton.shake()
             }
         }
@@ -50,15 +51,24 @@ class LogInViewController: UIViewController {
         present(registerUserVC,animated: true, completion: nil)
     }
     
-    func moveToMainController(profileName: String?) {
+    func signInGoogleUser() {
+        if let name = Profile.shared.userName{
+            if !name.isEmpty{
+                moveToMainController()
+            }
+        }
+    }
+    
+    func moveToMainController() {
         let mainController = MainContentViewController.shareInstance()
-        mainController.profileName = profileName
+        mainController.profileName = Profile.shared.userName
         self.navigationController?.pushViewController(mainController, animated: true)
     }
     
     fileprivate func setBordersAndDelegates(){
         
         userEmail.delegate = self
+        userPassword.delegate = self
         userEmail.becomeFirstResponder()
         userEmail.underline(changeColor: false)
     }
@@ -67,6 +77,7 @@ class LogInViewController: UIViewController {
 extension LogInViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.underline(changeColor: false)
         if let nextField = textField.superview?.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()

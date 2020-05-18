@@ -12,9 +12,7 @@ import UIKit
 class AddToCartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var cartTableView: UITableView!
-    @IBOutlet weak var placeOrderView: UIView!
     @IBOutlet weak var priceLable: UILabel!
-    @IBOutlet weak var placeOrderButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -22,13 +20,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cartTableView.register(UINib(nibName: "eCommerceAddToCartTableViewCell", bundle: nil), forCellReuseIdentifier: "addToCartCell")
         
-        placeOrderButton.layer.cornerRadius = 5
-        
         totalPriceCalculation()
-        
-        placeOrderView.layer.borderColor = UIColor.black.cgColor
-        placeOrderView.layer.borderWidth = 1
-        self.view.bringSubviewToFront(placeOrderView)
     }
     
     
@@ -42,10 +34,7 @@ class AddToCartViewController: UIViewController, UITableViewDelegate, UITableVie
         self.priceLable.text = "₹\(total_Price)"
         
         if total_Price == 0 {
-            placeOrderView.isHidden = true
             self.navigationController?.popViewController(animated: true)
-        } else {
-            placeOrderView.isHidden = false
         }
     }
     

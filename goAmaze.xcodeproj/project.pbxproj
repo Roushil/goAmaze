@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B006BBD24724BF700E5028E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B006BBC24724BF700E5028E /* Profile.swift */; };
 		2B165724243E5E1300FF7522 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B165723243E5E1300FF7522 /* CoreDataService.swift */; };
 		2B165725243E64E700FF7522 /* goAmaze.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 2B16571A243E3F6500FF7522 /* goAmaze.xcdatamodeld */; };
 		2B3E09E4243F87F600F44D74 /* MainContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E09E3243F87F600F44D74 /* MainContentViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.release.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.release.xcconfig"; sourceTree = "<group>"; };
+		2B006BBC24724BF700E5028E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		2B165719243E3F6500FF7522 /* goAmaze.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goAmaze.xcdatamodel; sourceTree = "<group>"; };
 		2B165723243E5E1300FF7522 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2B3E09E3243F87F600F44D74 /* MainContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				2B3E09E9243F88CE00F44D74 /* Content.swift */,
 				2B3E09EA243F88CE00F44D74 /* Product.swift */,
 				2BE92B9A246E952200B7B8AE /* OrderData.swift */,
+				2B006BBC24724BF700E5028E /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3E09F5243F88E500F44D74 /* BannerTableViewCell.swift in Sources */,
+				2B006BBD24724BF700E5028E /* Profile.swift in Sources */,
 				2BE92B9D246EA26A00B7B8AE /* OrderListViewController.swift in Sources */,
 				2BF6FE88242CB36F00EA7C4A /* LogInViewController.swift in Sources */,
 				2B3E09E4243F87F600F44D74 /* MainContentViewController.swift in Sources */,

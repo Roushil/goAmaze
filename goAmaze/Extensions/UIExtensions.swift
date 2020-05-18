@@ -21,7 +21,7 @@ extension UIImageView{
             return
         }
         guard let url = URL(string: image) else { return }
-        let imageData = try! Data(contentsOf: url)
+        guard let imageData = try? Data(contentsOf: url) else { return }
         let thumbImage = UIImage(data: imageData)
         imageCache.setObject(thumbImage!, forKey: image as NSString)
         self.image = thumbImage

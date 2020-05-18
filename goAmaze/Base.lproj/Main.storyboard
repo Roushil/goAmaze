@@ -19,7 +19,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9zN-hI-2qs">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="CDm-X4-yCf">
-                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="didSelectedMenuItem:" destination="3DD-9P-9t8" id="e7p-Av-0ZG"/>
                             </connections>
@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfy-kr-EO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3726.0869565217395" y="120.53571428571428"/>
+            <point key="canvasLocation" x="4636.231884057971" y="120.53571428571428"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="qc5-ig-miC">
@@ -85,7 +85,7 @@
                                                                             <constraint firstAttribute="height" constant="60" id="kFO-og-zAE"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -111,7 +111,7 @@
                                                                             <constraint firstAttribute="height" constant="60" id="dkp-0s-V9S"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -136,7 +136,7 @@
                                                                             <constraint firstAttribute="height" constant="60" id="WU9-N4-KLV"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -162,7 +162,7 @@
                                                                             <constraint firstAttribute="height" constant="60" id="CVv-tk-5sK"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
@@ -220,7 +220,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="1uP-6O-IOj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="SIGN UP">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -260,7 +260,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Wbt-yJ-qOA"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                         <state key="normal" title="SIGN IN">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -351,13 +351,12 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-BD-sLZ">
                                                     <rect key="frame" x="20" y="11" width="374" height="48"/>
-                                                    <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="34"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="34"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.12941176469999999" blue="0.30196078430000001" alpha="0.89554794520547942" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="bP0-BD-sLZ" firstAttribute="leading" secondItem="Tcf-4A-bnc" secondAttribute="leadingMargin" id="SXI-N7-ltY"/>
                                                 <constraint firstItem="bP0-BD-sLZ" firstAttribute="bottom" secondItem="Tcf-4A-bnc" secondAttribute="bottomMargin" id="YLZ-1c-X4C"/>
@@ -590,7 +589,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qh-kv-Kh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4439.130434782609" y="120.53571428571428"/>
+            <point key="canvasLocation" x="5349.275362318841" y="120.53571428571428"/>
         </scene>
         <!--Star Rate View Controller-->
         <scene sceneID="Mkm-2G-fXX">
@@ -614,7 +613,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5 out of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWf-vR-S1f">
-                                            <rect key="frame" x="118" y="320.66666666666669" width="178" height="47"/>
+                                            <rect key="frame" x="118" y="321" width="178" height="47"/>
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="34"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -634,16 +633,21 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-6W-sbn">
-                                            <rect key="frame" x="127" y="15" width="160" height="50"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="frame" x="127" y="15" width="160" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="aPf-xd-yL0"/>
+                                                <constraint firstAttribute="height" constant="45" id="aPf-xd-yL0"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="i4v-EZ-fIX"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
                                             <state key="normal" title="Rate Our App">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="doneRatingTapped:" destination="Hgv-yz-sFK" eventType="touchUpInside" id="mDH-lw-EQm"/>
                                             </connections>
@@ -679,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I50-gh-4XG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5186.9565217391309" y="120.53571428571428"/>
+            <point key="canvasLocation" x="6097.1014492753629" y="120.53571428571428"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="gyJ-tz-RyM">
@@ -844,7 +848,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDt-5O-Zr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5976.811594202899" y="-82.366071428571431"/>
+            <point key="canvasLocation" x="6886.9565217391309" y="-82.366071428571431"/>
         </scene>
         <!--Product View Controller-->
         <scene sceneID="aQn-dF-QKe">
@@ -863,6 +867,11 @@ Customs authorities require the value of the gift item to be stated directly on 
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="DummyCart" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-J7-xhT">
                                                 <rect key="frame" x="10" y="10" width="394" height="298.33333333333331"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PKu-SK-bSj">
                                                 <rect key="frame" x="10" y="318.33333333333331" width="394" height="99.333333333333314"/>
@@ -870,19 +879,19 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-Ot-NXI">
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="27.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="RKo-an-Sjn">
                                                         <rect key="frame" x="0.0" y="37.333333333333371" width="394" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-7c-ybN">
                                                         <rect key="frame" x="0.0" y="72" width="394" height="27.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -903,39 +912,29 @@ Customs authorities require the value of the gift item to be stated directly on 
                                         <rect key="frame" x="0.0" y="596.33333333333337" width="414" height="255.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-ZH-7J2">
-                                                <rect key="frame" x="30" y="35" width="354" height="50"/>
-                                                <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="30" y="35" width="354" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="A7L-4N-z0m"/>
+                                                    <constraint firstAttribute="height" constant="45" id="A7L-4N-z0m"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="Buy now">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buyProductTapped:" destination="oKP-sH-fZk" eventType="touchUpInside" id="2Oh-2Y-YEc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMu-Np-DeH">
-                                                <rect key="frame" x="30" y="115" width="354" height="50"/>
-                                                <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="30" y="110" width="354" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="bqI-NA-ZPT"/>
+                                                    <constraint firstAttribute="height" constant="45" id="bqI-NA-ZPT"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="Add to Cart">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="addToCartTapped:" destination="oKP-sH-fZk" eventType="touchUpInside" id="kr8-wI-CWy"/>
                                                 </connections>
@@ -986,7 +985,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsN-qk-izn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6771.0144927536239" y="120.53571428571428"/>
+            <point key="canvasLocation" x="7681.1594202898559" y="120.53571428571428"/>
         </scene>
         <!--Place Order View Controller-->
         <scene sceneID="rBT-rD-8pl">
@@ -1044,12 +1043,12 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                     <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGV-zO-8wF">
                                                         <rect key="frame" x="0.0" y="196" width="394" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-br-QU8">
                                                         <rect key="frame" x="0.0" y="245" width="394" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -1094,7 +1093,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                     <textField opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ny7-PA-I26">
                                                         <rect key="frame" x="0.0" y="49" width="394" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LIJ-Y7-iHb">
                                                         <rect key="frame" x="0.0" y="98" width="394" height="34"/>
@@ -1107,7 +1106,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                             <textField opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xI4-Ce-tmX">
                                                                 <rect key="frame" x="253" y="0.0" width="141" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -1127,17 +1126,12 @@ Customs authorities require the value of the gift item to be stated directly on 
                                         <rect key="frame" x="0.0" y="736.33333333333337" width="414" height="81.666666666666629"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR9-pA-keW">
-                                                <rect key="frame" x="20" y="17.333333333333258" width="374" height="47"/>
-                                                <color key="backgroundColor" red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                                <rect key="frame" x="20" y="19.333333333333258" width="374" height="43"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="Place Order">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="placeOrderTapped:" destination="t7i-PB-0vs" eventType="touchUpInside" id="7mB-n2-iPx"/>
                                                 </connections>
@@ -1196,7 +1190,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GvW-Wz-yvY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8195.652173913044" y="119.86607142857142"/>
+            <point key="canvasLocation" x="9105.7971014492759" y="119.86607142857142"/>
         </scene>
         <!--Order List View Controller-->
         <scene sceneID="yFq-zh-07M">
@@ -1230,7 +1224,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiK-uO-VEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8931.8840579710159" y="119.86607142857142"/>
+            <point key="canvasLocation" x="9842.0289855072479" y="119.86607142857142"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="vfU-CT-F0s">
@@ -1288,7 +1282,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                                             <constraint firstAttribute="height" constant="60" id="dMC-vv-hak"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
@@ -1314,7 +1308,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                                             <constraint firstAttribute="height" constant="60" id="3bN-Po-ifS"/>
                                                                         </constraints>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
@@ -1345,7 +1339,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="8a2-oI-BXs"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="SIGN IN">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -1386,7 +1380,7 @@ Customs authorities require the value of the gift item to be stated directly on 
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4gO-VG-o9y"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                                 <state key="normal" title="SIGN UP">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -1462,64 +1456,74 @@ Customs authorities require the value of the gift item to be stated directly on 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-9J-iEY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="821"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ejc-vk-sIX" id="DC4-Xk-CFe"/>
                                     <outlet property="delegate" destination="Ejc-vk-sIX" id="ya0-r1-nhD"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" id="aQo-jp-RHd">
-                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="aQo-jp-RHd">
+                                <rect key="frame" x="0.0" y="801" width="414" height="95"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-uG-2zu">
-                                        <rect key="frame" x="16" y="15" width="94" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-8h-A5R">
-                                        <rect key="frame" x="198" y="12" width="200" height="51"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="klN-iS-jee">
+                                        <rect key="frame" x="15" y="15" width="384" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-uG-2zu">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-8h-A5R">
+                                                <rect key="frame" x="227" y="0.0" width="157" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Proceed">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="placeORder" destination="Ejc-vk-sIX" eventType="touchUpInside" id="v1m-3W-JbS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="pTe-T7-K2x"/>
+                                            <constraint firstItem="NbU-uG-2zu" firstAttribute="leading" secondItem="klN-iS-jee" secondAttribute="leading" id="Ngc-Pt-XQt"/>
+                                            <constraint firstAttribute="trailing" secondItem="GkD-8h-A5R" secondAttribute="trailing" id="UFs-08-nWj"/>
                                         </constraints>
-                                        <state key="normal" title="Proceed"/>
-                                        <connections>
-                                            <action selector="placeORder" destination="Ejc-vk-sIX" eventType="touchUpInside" id="v1m-3W-JbS"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.12941176469999999" blue="0.30196078430000001" alpha="0.9023972602739726" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="NbU-uG-2zu" firstAttribute="leading" secondItem="aQo-jp-RHd" secondAttribute="leading" constant="16" id="6Cz-DL-7VG"/>
-                                    <constraint firstItem="GkD-8h-A5R" firstAttribute="top" secondItem="aQo-jp-RHd" secondAttribute="top" constant="12" id="LAL-Db-3Je"/>
-                                    <constraint firstAttribute="bottom" secondItem="NbU-uG-2zu" secondAttribute="bottom" constant="15" id="OhW-49-CUn"/>
-                                    <constraint firstItem="NbU-uG-2zu" firstAttribute="top" secondItem="aQo-jp-RHd" secondAttribute="top" constant="15" id="P8f-ah-Rrj"/>
-                                    <constraint firstAttribute="trailing" secondItem="GkD-8h-A5R" secondAttribute="trailing" constant="16" id="TVa-j8-CQn"/>
-                                    <constraint firstAttribute="bottom" secondItem="GkD-8h-A5R" secondAttribute="bottom" constant="12" id="y6N-yc-reH"/>
+                                    <constraint firstItem="klN-iS-jee" firstAttribute="top" secondItem="aQo-jp-RHd" secondAttribute="top" constant="15" id="0YR-zo-40F"/>
+                                    <constraint firstItem="klN-iS-jee" firstAttribute="leading" secondItem="aQo-jp-RHd" secondAttribute="leading" constant="15" id="E2m-EE-xBJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="klN-iS-jee" secondAttribute="trailing" constant="15" id="LP3-0e-Sju"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yQK-9J-iEY" firstAttribute="leading" secondItem="aQo-jp-RHd" secondAttribute="leading" id="4d7-AR-irO"/>
-                            <constraint firstItem="yQK-9J-iEY" firstAttribute="top" secondItem="MGZ-qn-S5L" secondAttribute="top" id="9eu-dq-KL3"/>
-                            <constraint firstItem="yQK-9J-iEY" firstAttribute="trailing" secondItem="aQo-jp-RHd" secondAttribute="trailing" id="TJ2-P3-Kr7"/>
-                            <constraint firstItem="yQK-9J-iEY" firstAttribute="bottom" secondItem="aQo-jp-RHd" secondAttribute="top" id="q55-aB-J2e"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="top" secondItem="mhG-16-pSR" secondAttribute="top" id="GkS-xl-gxh"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="leading" secondItem="mhG-16-pSR" secondAttribute="leading" id="Omm-GZ-Y9N"/>
+                            <constraint firstItem="yQK-9J-iEY" firstAttribute="trailing" secondItem="mhG-16-pSR" secondAttribute="trailing" id="iF0-Gz-9Mb"/>
+                            <constraint firstItem="aQo-jp-RHd" firstAttribute="top" secondItem="yQK-9J-iEY" secondAttribute="bottom" id="p1J-4X-cSz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mhG-16-pSR"/>
                     </view>
                     <connections>
                         <outlet property="cartTableView" destination="yQK-9J-iEY" id="dXW-3A-lhn"/>
-                        <outlet property="placeOrderButton" destination="GkD-8h-A5R" id="BEw-5K-oCU"/>
-                        <outlet property="placeOrderView" destination="aQo-jp-RHd" id="Ymm-e8-laB"/>
                         <outlet property="priceLable" destination="NbU-uG-2zu" id="wWF-Tn-zqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACf-e2-hxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7497.1014492753629" y="120.53571428571428"/>
+            <point key="canvasLocation" x="8405.7971014492759" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zl1-Su-pxp">
@@ -1538,6 +1542,24 @@ Customs authorities require the value of the gift item to be stated directly on 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVj-Jf-WH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1687" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VLE-Mf-Zgg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xv3-LU-Kni" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NM0-kD-FIL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3DD-9P-9t8" kind="relationship" relationship="rootViewController" id="Uvg-cR-AzK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBZ-4g-9EP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3726.0869565217395" y="120.53571428571428"/>
         </scene>
     </scenes>
     <resources>

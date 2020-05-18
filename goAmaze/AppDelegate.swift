@@ -39,10 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             return
         }
         
-        // let fullName = user.profile.name
-        guard let email = user.profile.email else { return }
-        print("Email: \(email)")
-        // ...
+        if let name = user.profile.givenName {
+            if !name.isEmpty{
+                Profile.shared.userName = name
+            }
+        }
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
