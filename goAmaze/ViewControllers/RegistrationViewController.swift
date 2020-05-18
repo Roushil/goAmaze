@@ -53,6 +53,7 @@ extension RegistrationViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        
+        textField.underline(changeColor: false)
         if let nextField = textField.superview?.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
        } else {
@@ -62,6 +63,7 @@ extension RegistrationViewController: UITextFieldDelegate{
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        
         textField.underline(changeColor: true)
         confirmPasswordField.text != setPasswordField.text ? (alertView.isHidden = false) : (alertView.isHidden = true)
         

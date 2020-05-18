@@ -22,6 +22,7 @@ class PlaceOrderViewController: UIViewController {
     @IBOutlet weak var cardExpiryDate: UITextField!
     @IBOutlet weak var cardCVV: UITextField!
     @IBOutlet weak var orderProduct: UIButton!
+    @IBOutlet weak var productPrice: UILabel!
     
     var product: Product!
     
@@ -57,6 +58,8 @@ class PlaceOrderViewController: UIViewController {
         cardNumber.delegate = self
         cardExpiryDate.delegate = self
         cardCVV.delegate = self
+        
+        productPrice.text = "₹\(product.price)"
     }
     
     func showAlert(){
@@ -80,6 +83,7 @@ class PlaceOrderViewController: UIViewController {
             self.navigationController?.popToViewController(mainController, animated: true)
         }
         alert.addAction(action)
+        
         present(alert, animated: true, completion: nil)
     }
 }

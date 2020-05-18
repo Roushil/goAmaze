@@ -32,10 +32,9 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rupee = "\u{20B9}"
         productName.text = name
         productType.text = type
-        productPrice.text = "\(rupee)\(price ?? "")"
+        productPrice.text = "₹\(price ?? "")"
         productImage.loadImageUsingCache(image: imageURL)
     }
     @IBAction func buyProductTapped(_ sender: UIButton) {

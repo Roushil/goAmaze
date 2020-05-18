@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Profile {
+class Profile {
     
-    static var shared = Profile()
+    static let shared = Profile()
     
     var userName: String?
 }
