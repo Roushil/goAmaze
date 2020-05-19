@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController,GIDSignInDelegate {
     
 
     @IBOutlet weak var userEmail: UITextField!
@@ -21,14 +21,15 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        GIDSignIn.sharedInstance().delegate = self
         setBordersAndDelegates()
-        signInGoogleUser()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        
     }
     
     @IBAction func signInUser(_ sender: UIButton) {
@@ -49,6 +50,27 @@ class LogInViewController: UIViewController {
         let registerUserVC = RegistrationViewController.shareInstance()
         registerUserVC.modalPresentationStyle = .fullScreen
         present(registerUserVC,animated: true, completion: nil)
+    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        
+        if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.")
+            } else {
+                print("\(error.localizedDescription)")
+            }
+            return
+        }
+        
+        if let name = user.profile.givenName {
+            if !name.isEmpty{
+                Profile.shared.userName = name
+                signInGoogleUser()
+            }
+        }
     }
     
     func signInGoogleUser() {
