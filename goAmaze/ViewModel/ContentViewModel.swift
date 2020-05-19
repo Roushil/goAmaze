@@ -13,4 +13,6 @@ class ContentViewModel{
     static var shared = ContentViewModel()
     
     var productContent: [Content]?
+    var cartList = [CartData]()
+    var orderList = [OrderData]()
 }

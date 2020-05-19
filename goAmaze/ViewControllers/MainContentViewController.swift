@@ -9,37 +9,68 @@
 import Foundation
 import UIKit
 import GoogleSignIn
+import SideMenu
 
 class MainContentViewController: UIViewController {
     
     var contentModel: [Content]?
     var contentTableView: UITableView!
-    fileprivate let kCommerceListTableViewHeight: CGFloat = 200
-    let transistion = SlideInTransition()
+    var menu: SideMenuNavigationController? = nil
+    var profileName: String?
+    let cartButton = SSBadgeButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setMenuItems()
         fetchJSONData()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
-    @IBAction func didTapSignOut(_ sender: AnyObject) {
-      GIDSignIn.sharedInstance().signOut()
-        print("Successfully Signed Out")
-        let signInVC = LogInViewController.shareInstance()
-        signInVC.modalPresentationStyle = .fullScreen
-        self.present(signInVC, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupCartButton()
+        
     }
+    
     
     @IBAction func didSelectedMenuItem(_ sender: Any) {
-        guard let viewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
-        viewController.didMenuTapped = { menuType in
+        present(menu!, animated: true, completion: nil)
+    }
+    
+    func setupCartButton() {
+        cartButton.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
+        cartButton.setImage(UIImage(named: "Cart"), for: .normal)
+        cartButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 0)
+        cartButton.tintColor = .black
+        cartButton.addTarget(self, action: #selector(moveToCartController), for: .touchUpInside)
+        cartButton.clipsToBounds = true
+        cartButton.badge = "\(ContentViewModel.shared.cartList.count)"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: cartButton)
+    }
+    
+    func setMenuItems(){
+        
+        let menuVC = self.storyboard?.instantiateViewController(identifier: "MenuViewController") as! MenuViewController
+        menuVC.userName = profileName
+        menu = SideMenuNavigationController(rootViewController: menuVC)
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: true)
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        
+        menuVC.didMenuTapped = { menuType in
             self.transitionToMainView(menuType)
         }
-        viewController.modalPresentationStyle = .overCurrentContext
-        viewController.transitioningDelegate = self
-        present(viewController, animated: true)
     }
-
+    
+    func signOutUser(){
+        
+        GIDSignIn.sharedInstance().signOut()
+        print("Successfully Signed Out")
+        self.navigationController?.popViewController(animated: true)
+    }
     
     func setupTableView() {
         
@@ -53,6 +84,7 @@ class MainContentViewController: UIViewController {
     }
     
     func registerNib() {
+        contentTableView.register(UINib(nibName: "eCommerceHorizontalScrollTableViewCell", bundle: nil), forCellReuseIdentifier: "horizontalScrollViewIdentifier")
         contentTableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "BannerTableViewCell")
         contentTableView.register(UINib(nibName: "SplitBannerCell", bundle: nil), forCellReuseIdentifier: "SplitBannerCell")
     }
@@ -70,26 +102,76 @@ class MainContentViewController: UIViewController {
         }
     }
     
+    
+    func showAlert(title: String, message: String, actionString: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let actionButton = UIAlertAction(title: actionString, style: .default, handler: nil)
+        alert.addAction(actionButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func showAbout(){
+        let vc = AboutViewController.shareInstance()
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func moveToCartController() {
+        
+        if ContentViewModel.shared.cartList.count == 0 {
+            
+            showAlert(title: "Your Cart is Empty", message: "Add items to it now", actionString: "Thank You")
+        }
+        else {
+            let cartController = self.storyboard?.instantiateViewController(identifier: "AddToCartViewController") as! AddToCartViewController
+            self.navigationController?.pushViewController(cartController, animated: true)
+        }
+    }
+    
+    func moveToOrderList(){
+        
+        if ContentViewModel.shared.orderList.count == 0 {
+            
+            showAlert(title: "No Order Placed", message: "You have not placed any order. Buy items now", actionString: "Thank You")
+            
+        }else{
+            let orderVC = OrderListViewController.shareInstance()
+            navigationController?.pushViewController(orderVC, animated: true)
+        }
+    }
+    
+    func moveToRatingsController(){
+        
+        let vc = StarRateViewController.shareInstance()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
+    }
+    
     func transitionToMainView(_ menuType: MenuType) {
+        
         switch menuType {
         case .profile: break
         case .home: break
-        case .cart: break
-        case .about: break
+        case .orders: moveToOrderList()
+        case .cart: moveToCartController()
+        case .notifications: showAlert(title: "Not Available",
+                                       message: "Your Notification is not available at the moment. Please try again later",
+                                       actionString: "OK")
+        case .ratings: moveToRatingsController()
+        case .about: showAbout()
+        case .signOut: signOutUser()
         }
     }
-
 }
-
 
 extension MainContentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kCommerceListTableViewHeight
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kCommerceListTableViewHeight
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,6 +182,21 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
         
         guard let content = contentModel?[indexPath.row] else { return UITableViewCell()}
         switch indexPath.row {
+            
+        case 0...3:
+            let cell = contentTableView.dequeueReusableCell(withIdentifier: "horizontalScrollViewIdentifier", for: indexPath) as! eCommerceHorizontalScrollTableViewCell
+            cell.setupItemsinCells(itemsModel: content)
+            
+            cell.productDetail = { [weak self] (product) in
+                
+                guard let _self = self else { return }
+                let vc = ProductViewController.shareInstance()
+                vc.product = product
+                _self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            
+            return cell
         case 4:
             let cell = contentTableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell", for: indexPath) as! BannerTableViewCell
             cell.bannerImage.loadImageUsingCache(image: content.bannerImage ?? "")
@@ -116,14 +213,9 @@ extension MainContentViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension MainContentViewController: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transistion.isPresenting = true
-        return transistion
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transistion.isPresenting = false
-        return transistion
+
+extension MainContentViewController{
+    static func shareInstance() -> MainContentViewController{
+        MainContentViewController.instantiateFromStoryboard()
     }
 }
