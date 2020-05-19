@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "vippng.com-grocery-cart-png-4957809.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "vippng.com-grocery-cart-png-4957809@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "vippng.com-grocery-cart-png-4957809@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
+  }
+}
