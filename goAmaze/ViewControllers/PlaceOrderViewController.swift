@@ -24,7 +24,7 @@ class PlaceOrderViewController: UIViewController {
     @IBOutlet weak var orderProduct: UIButton!
     @IBOutlet weak var productPrice: UILabel!
     
-    var product: Product!
+    var product: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class PlaceOrderViewController: UIViewController {
         cardExpiryDate.delegate = self
         cardCVV.delegate = self
         
-        productPrice.text = "₹\(product.price)"
+        productPrice.text = "₹\(product?.price ?? "")"
     }
     
     func showAlert(){
@@ -75,10 +75,10 @@ class PlaceOrderViewController: UIViewController {
         let alert = UIAlertController(title: "Order Placed Successfully", message: "Your Order No #\(orderNumber) will be dispatched shortly", preferredStyle: .alert)
         let action = UIAlertAction(title: "Thank You", style: .cancel) { (action) in
             ContentViewModel.shared.orderList.append(OrderData(orderId: orderNumber,
-                                                               orderName: self.product.name,
-                                                               orderPrice: self.product.price,
-                                                               orderImageUrl: self.product.imageURL,
-                                                               orderType: self.product.type))
+                                                               orderName: self.product?.name ?? "",
+                                                               orderPrice: self.product?.price ?? "",
+                                                               orderImageUrl: self.product?.imageURL ?? "",
+                                                               orderType: self.product?.type ?? ""))
             let mainController = self.navigationController?.viewControllers[1] as! MainContentViewController
             self.navigationController?.popToViewController(mainController, animated: true)
         }

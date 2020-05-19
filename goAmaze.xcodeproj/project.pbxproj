@@ -25,6 +25,7 @@
 		2B3E0A0D243FA06900F44D74 /* Authentication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */; };
 		2B3E0A0E243FA06900F44D74 /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */; };
 		2B4BB7BA246D47DC002B2AA7 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4BB7B9246D47DC002B2AA7 /* PlaceOrderViewController.swift */; };
+		2B7E88AD2473BF21009F8A17 /* goAmazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E88AC2473BF21009F8A17 /* goAmazeTests.swift */; };
 		2BB235BC246C22980089CE01 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB235BB246C22980089CE01 /* AboutViewController.swift */; };
 		2BB235BE246C4D680089CE01 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB235BD246C4D680089CE01 /* ProductViewController.swift */; };
 		2BE92B8B246E7F6E00B7B8AE /* SSBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE92B8A246E7F6E00B7B8AE /* SSBadgeButton.swift */; };
@@ -51,6 +52,16 @@
 		DE91F7E93BC905AEF22A8227 /* libPods-goAmaze.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D821E40CF841E0A5D10FD6 /* libPods-goAmaze.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2B7E88AF2473BF21009F8A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BF6FE78242CB36E00EA7C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BF6FE7F242CB36F00EA7C4A;
+			remoteInfo = goAmaze;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0F730DE99B9D82C957565B67 /* Pods-goAmaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goAmaze.release.xcconfig"; path = "Target Support Files/Pods-goAmaze/Pods-goAmaze.release.xcconfig"; sourceTree = "<group>"; };
 		2B006BBC24724BF700E5028E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -71,6 +82,9 @@
 		2B3E0A0B243FA06800F44D74 /* Authentication+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2B3E0A0C243FA06900F44D74 /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2B4BB7B9246D47DC002B2AA7 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
+		2B7E88AA2473BF21009F8A17 /* goAmazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goAmazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7E88AC2473BF21009F8A17 /* goAmazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goAmazeTests.swift; sourceTree = "<group>"; };
+		2B7E88AE2473BF21009F8A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB235BB246C22980089CE01 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		2BB235BD246C4D680089CE01 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		2BE92B8A246E7F6E00B7B8AE /* SSBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBadgeButton.swift; sourceTree = "<group>"; };
@@ -101,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B7E88A72473BF21009F8A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF6FE7D242CB36F00EA7C4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,10 +224,20 @@
 			path = "Navigation Bar";
 			sourceTree = "<group>";
 		};
+		2B7E88AB2473BF21009F8A17 /* goAmazeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E88AC2473BF21009F8A17 /* goAmazeTests.swift */,
+				2B7E88AE2473BF21009F8A17 /* Info.plist */,
+			);
+			path = goAmazeTests;
+			sourceTree = "<group>";
+		};
 		2BF6FE77242CB36E00EA7C4A = {
 			isa = PBXGroup;
 			children = (
 				2BF6FE82242CB36F00EA7C4A /* goAmaze */,
+				2B7E88AB2473BF21009F8A17 /* goAmazeTests */,
 				2BF6FE81242CB36F00EA7C4A /* Products */,
 				31A08127AF3960FC1B87135C /* Pods */,
 				AA1E63BB094F09788B4FAA38 /* Frameworks */,
@@ -217,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				2BF6FE80242CB36F00EA7C4A /* goAmaze.app */,
+				2B7E88AA2473BF21009F8A17 /* goAmazeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +295,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B7E88A92473BF21009F8A17 /* goAmazeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7E88B32473BF21009F8A17 /* Build configuration list for PBXNativeTarget "goAmazeTests" */;
+			buildPhases = (
+				2B7E88A62473BF21009F8A17 /* Sources */,
+				2B7E88A72473BF21009F8A17 /* Frameworks */,
+				2B7E88A82473BF21009F8A17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B7E88B02473BF21009F8A17 /* PBXTargetDependency */,
+			);
+			name = goAmazeTests;
+			productName = goAmazeTests;
+			productReference = 2B7E88AA2473BF21009F8A17 /* goAmazeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2BF6FE7F242CB36F00EA7C4A /* goAmaze */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BF6FE94242CB37500EA7C4A /* Build configuration list for PBXNativeTarget "goAmaze" */;
@@ -288,10 +338,14 @@
 		2BF6FE78242CB36E00EA7C4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = personal;
 				TargetAttributes = {
+					2B7E88A92473BF21009F8A17 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 2BF6FE7F242CB36F00EA7C4A;
+					};
 					2BF6FE7F242CB36F00EA7C4A = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -311,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				2BF6FE7F242CB36F00EA7C4A /* goAmaze */,
+				2B7E88A92473BF21009F8A17 /* goAmazeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B7E88A82473BF21009F8A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF6FE7E242CB36F00EA7C4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +441,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B7E88A62473BF21009F8A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7E88AD2473BF21009F8A17 /* goAmazeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF6FE7C242CB36F00EA7C4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +488,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2B7E88B02473BF21009F8A17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BF6FE7F242CB36F00EA7C4A /* goAmaze */;
+			targetProxy = 2B7E88AF2473BF21009F8A17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2BF6FE89242CB36F00EA7C4A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -438,6 +516,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B7E88B12473BF21009F8A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7VYX35CT4;
+				INFOPLIST_FILE = goAmazeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.udacity.goAmazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goAmaze.app/goAmaze";
+			};
+			name = Debug;
+		};
+		2B7E88B22473BF21009F8A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7VYX35CT4;
+				INFOPLIST_FILE = goAmazeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.udacity.goAmazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goAmaze.app/goAmaze";
+			};
+			name = Release;
+		};
 		2BF6FE92242CB37500EA7C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -593,6 +715,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B7E88B32473BF21009F8A17 /* Build configuration list for PBXNativeTarget "goAmazeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B7E88B12473BF21009F8A17 /* Debug */,
+				2B7E88B22473BF21009F8A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2BF6FE7B242CB36E00EA7C4A /* Build configuration list for PBXProject "goAmaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
