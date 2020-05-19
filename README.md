@@ -38,7 +38,7 @@
 - ***Functionalities:***
   - Buy Items
   - Add items in Cart
-  - Rate App
+  - Rate App by sliding through Stars
   - Check out Cart list
   - History of Orders
 
