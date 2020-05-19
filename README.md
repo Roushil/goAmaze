@@ -1,6 +1,4 @@
-**GoAmaze**
-
-*e-Commerce Protoype*
+**An e-Commerce Protoype**
 
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 33 47](https://user-images.githubusercontent.com/25398924/82293971-02a4ff80-99cb-11ea-8058-49cdc25071f5.png)             
@@ -36,8 +34,6 @@
 
 
 
-
-An eCommerce App: -
 
 - ***Functionalities:***
   - Buy Items
