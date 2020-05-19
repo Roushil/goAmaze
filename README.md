@@ -1,4 +1,5 @@
 **GoAmaze**
+
 *e-Commerce Protoype*
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 33 47](https://user-images.githubusercontent.com/25398924/82291378-7ee91400-99c6-11ea-82de-a665723b26ca.png)
