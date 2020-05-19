@@ -35,3 +35,35 @@
    ![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 45 45](https://user-images.githubusercontent.com/25398924/82294156-51eb3000-99cb-11ea-9bcf-712fb301793f.png)
 
 
+
+
+An eCommerce App: -
+
+- ***Functionalities:***
+  - Buy Items
+  - Add items in Cart
+  - Rate App
+  - Check out Cart list
+  - History of Orders
+
+- ***Used storyboard for UI Design***
+- ***Handling Alerts for Error and Success***
+- ***Cache Images***
+- ***Template for SignUp&Login Page*** 
+
+
+# Architecture
+This app follows the **MVVM** Pattern
+
+# Pods
+1. pod 'GoogleSignIn'           
+> Logging Users 
+2. pod 'SideMenu'        
+> MenuBar Sliding
+3. pod 'Cosmos'       
+> Rate App
+
+
+	
+  
+
