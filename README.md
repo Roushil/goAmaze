@@ -1,6 +1,6 @@
 # goAmaze
 
-![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 33 47](https://user-images.githubusercontent.com/25398924/82291378-7ee91400-99c6-11ea-82de-a665723b26ca.png) 
+![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 33 47](https://user-images.githubusercontent.com/25398924/82291378-7ee91400-99c6-11ea-82de-a665723b26ca.png)<!-- .element height="50%" width="50%" --> 
 
 
 ![Simulator Screen Shot - iPhone 11 Pro Max - 2020-05-19 at 11 33 43](https://user-images.githubusercontent.com/25398924/82291457-9c1de280-99c6-11ea-983b-db71abdf4dc0.png)
